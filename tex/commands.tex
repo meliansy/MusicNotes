@@ -1,0 +1,112 @@
+% --- Basic commands ---
+%   Euler's constant
+\newcommand{\eu}{\mathrm{e}}
+
+%   Imaginary unit
+\newcommand{\im}{\mathrm{i}}
+
+%===================================
+% Environments
+\newenvironment{sampans}{\noindent\textit{Solution.}}{\hfill$\square$}
+%===================================
+% Environment Boxes
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{ForestGreen},
+	bodyfont=\normalfont
+]{thmgreen}
+
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{red!80!black},
+	bodyfont=\normalfont
+]{thmred}
+
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{blue!80!black},
+	bodyfont=\normalfont
+]{thmblue}
+
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{violet!80!black},
+	bodyfont=\normalfont
+]{thmviolet}
+
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{orange!80!black},
+	bodyfont=\normalfont
+]{thmorange}
+
+\declaretheorem[name=Definition,numberwithin=section,style=thmblue]{definition}
+\declaretheorem[name=Example,sibling=definition,style=thmgreen]{example}
+\declaretheorem[name=Analysis Model,numberwithin=chapter,style=thmred]{model}
+\declaretheorem[name=Sample Question, sibling
+=definition, style=thmviolet]{sampques}
+\declaretheorem[name=Equation, sibling=definition, style=thmgreen]{thmeq}
+
+\tcolorboxenvironment{example}
+{ 
+    sharp corners,
+    colback=ForestGreen!10,
+    colframe=ForestGreen!70,
+    boxrule = 0pt,
+    enhanced,
+    breakable,
+    borderline west = {3pt}{0pt}{ForestGreen!black},
+}
+
+\tcolorboxenvironment{definition}
+{ 
+    sharp corners,
+    colback=blue!10,
+    colframe=blue!70,
+    boxrule = 0pt,
+    enhanced,
+    breakable,
+    borderline west = {3pt}{0pt}{blue!black},
+}
+
+\tcolorboxenvironment{model}
+{ 
+    sharp corners,
+    colback=red!10,
+    colframe=red!70,
+    boxrule = 0pt,
+    enhanced,
+    breakable,
+    borderline west = {3pt}{0pt}{red!black},
+}
+
+\tcolorboxenvironment{sampques}
+{ 
+    sharp corners,
+    colback=violet!10,
+    colframe=violet!70,
+    boxrule = 0pt,
+    enhanced,
+    breakable,
+    borderline west = {3pt}{0pt}{violet!black},
+}
+
+\tcolorboxenvironment{thmeq}
+{ 
+    sharp corners,
+    colback=ForestGreen!10,
+    colframe=ForestGreen!70,
+    boxrule = 0pt,
+    enhanced,
+    breakable,
+    borderline west = {3pt}{0pt}{ForestGreen!black},
+}
+
+\newtcolorbox{generalbox}
+{
+  sharp corners,
+    colback=orange!10,
+    colframe=orange!70,
+    boxrule = 0pt,
+    enhanced,
+    breakable,
+    borderline west = {3pt}{0pt}{orange!black},
+}
+%=================================
+\newcommand{\emp}[2]{\textcolor{#2}{\textbf{#1}}}
+%=================================
